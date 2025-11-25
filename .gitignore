@@ -1,0 +1,5 @@
+venv/
+myenv/
+*.pyc
+db.sqlite3
+media/
