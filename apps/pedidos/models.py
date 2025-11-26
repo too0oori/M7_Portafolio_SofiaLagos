@@ -3,9 +3,6 @@ from django.contrib.auth.models import User
 from apps.usuarios.models import Direccion
 from apps.productos.models import Producto, Talla
 
-# Create your models here.
-# pedidos/models.py
-
 class Pedido(models.Model):
     """Orden de compra"""
     ESTADO_CHOICES = [
@@ -22,36 +19,60 @@ class Pedido(models.Model):
     estado = models.CharField(max_length=20, choices=ESTADO_CHOICES, default='pendiente')
     total = models.DecimalField(max_digits=10, decimal_places=2)
     direccion_envio = models.ForeignKey(Direccion, on_delete=models.SET_NULL, null=True)
-    
-    # Datos de envío
     direccion_completa = models.TextField()
-    
-    # Pago
     metodo_pago = models.CharField(max_length=50)
     numero_seguimiento = models.CharField(max_length=100, blank=True)
     notas = models.TextField(blank=True)
+    
+    class Meta:
+        verbose_name = "Pedido"
+        verbose_name_plural = "Pedidos"
+        ordering = ['-fecha_pedido']
+    
+    def __str__(self):
+        return f"Pedido #{self.id} - {self.cliente.username}"
 
 class DetallePedido(models.Model):
     """Productos dentro de un pedido"""
-    pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE, related_name='detalles')  # 1:N
+    pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE, related_name='detalles')
     producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
     talla = models.ForeignKey(Talla, on_delete=models.CASCADE)
     cantidad = models.IntegerField()
     precio_unitario = models.DecimalField(max_digits=10, decimal_places=2)
     subtotal = models.DecimalField(max_digits=10, decimal_places=2)
+    
+    class Meta:
+        verbose_name = "Detalle de Pedido"
+        verbose_name_plural = "Detalles de Pedidos"
+    
+    def __str__(self):
+        return f"{self.cantidad}x {self.producto.nombre}"
 
 class Carrito(models.Model):
     """Carrito temporal del usuario"""
-    user = models.OneToOneField(User, on_delete=models.CASCADE)  # 1:1
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     fecha_actualizacion = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        verbose_name = "Carrito"
+        verbose_name_plural = "Carritos"
+    
+    def __str__(self):
+        return f"Carrito de {self.user.username}"
 
 class ItemCarrito(models.Model):
     """Items dentro del carrito"""
-    carrito = models.ForeignKey(Carrito, on_delete=models.CASCADE, related_name='items')  # 1:N
+    carrito = models.ForeignKey(Carrito, on_delete=models.CASCADE, related_name='items')
     producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
     talla = models.ForeignKey(Talla, on_delete=models.CASCADE)
     cantidad = models.IntegerField(default=1)
     
     class Meta:
         unique_together = ['carrito', 'producto', 'talla']
+        verbose_name = "Item del Carrito"
+        verbose_name_plural = "Items del Carrito"
+    
+    def __str__(self):
+        return f"{self.cantidad}x {self.producto.nombre} - Talla {self.talla.nombre}"
+
