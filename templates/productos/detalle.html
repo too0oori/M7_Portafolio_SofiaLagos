@@ -1,61 +1,118 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 
+{% block title %}{{ producto.nombre }} — A Medias Tintas{% endblock %}
+
 {% block content %}
-<div class="container mt-5 pt-4 mb-5">
-
-    <div class="row g-4">
-
+<div class="container py-5">
+    <div class="row">
+        <!-- Imagen del producto -->
         <div class="col-md-6">
             {% if producto.imagen_principal %}
-                <img 
-                    src="{{ producto.imagen_principal.url }}" 
-                    alt="{{ producto.nombre }}"
-                    class="img-fluid border"
-                    style="border-radius:0;">
+                <img src="{{ producto.imagen_principal.url }}" 
+                     class="img-fluid" 
+                     alt="{{ producto.nombre }}"
+                     style="border: 1px solid #000;">
             {% else %}
-                <img 
-                    src="{% static 'images/sin-imagen.JPG' %}" 
-                    alt="Sin imagen"
-                    class="img-fluid border"
-                    style="border-radius:0;">
+                <img src="{% static 'images/sin-imagen.JPG' %}" 
+                     class="img-fluid" 
+                     alt="Sin imagen">
             {% endif %}
         </div>
 
+        <!-- Información del producto -->
         <div class="col-md-6">
-            <div class="p-4 border" style="border-radius:0;">
-                
-                <h2 class="mb-3" style="font-family:'Courier New', monospace;">
-                    {{ producto.nombre }}
-                </h2>
+            <h1 style="font-family: 'Courier New'; font-weight: 900;">
+                {{ producto.nombre }}
+            </h1>
 
-                <p class="mb-2">
-                    <strong>Precio:</strong> ${{ producto.precio }}
+            <p class="text-muted">{{ producto.categoria.nombre }}</p>
+
+            <h3 class="my-3">${{ producto.precio }}</h3>
+
+            <p>{{ producto.descripcion }}</p>
+
+            <!-- Etiquetas -->
+            {% if producto.etiquetas.all %}
+                <div class="mb-3">
+                    {% for etiqueta in producto.etiquetas.all %}
+                        <span class="badge bg-secondary">{{ etiqueta.nombre }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <!-- Stock -->
+            {% if producto.stock > 0 %}
+                <p class="text-success">
+                    <strong>Stock disponible:</strong> {{ producto.stock }} unidades
                 </p>
 
-                <p class="mb-2">
-                    <strong>Descripción:</strong> {{ producto.descripcion }}
+                <!-- Formulario para agregar al carrito -->
+                <form method="post" action="{% url 'apps.pedidos:agregar_carrito' producto.pk %}">
+                    {% csrf_token %}
+                    
+                    <!-- Selector de talla si se tiene tallas-->
+                    {% if producto.producto_tallas.all %}
+                    <div class="mb-3">
+                        <label for="talla" class="form-label">Talla:</label>
+                        <select name="talla" id="talla" class="form-select" required>
+                            <option value="">Selecciona una talla</option>
+                            {% for pt in producto.producto_tallas.all %}
+                                {% if pt.stock > 0 %}
+                                    <option value="{{ pt.talla.id }}">
+                                        {{ pt.talla.nombre }} ({{ pt.stock }} disponibles)
+                                    </option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    {% endif %}
+
+                    <!-- Cantidad -->
+                    <div class="mb-3">
+                        <label for="cantidad" class="form-label">Cantidad:</label>
+                        <input type="number" 
+                               name="cantidad" 
+                               id="cantidad" 
+                               class="form-control" 
+                               value="1" 
+                               min="1" 
+                               max="{{ producto.stock }}"
+                               style="width: 100px;">
+                    </div>
+
+                    <button type="submit" 
+                            class="btn btn-dark btn-lg w-100" 
+                            style="border-radius: 0;">
+                        Agregar al carrito
+                    </button>
+                </form>
+
+            {% else %}
+                <p class="text-danger">
+                    <strong>Sin stock disponible</strong>
                 </p>
+            {% endif %}
 
-                <p class="mb-4">
-                    <strong>Categoría:</strong> {{ producto.categoria.nombre }}
-                </p>
-
-                {% if user.is_staff %}
-                <a href="{% url 'apps.productos:editar' producto.pk %}" 
-                   class="btn btn-dark me-2" style="border-radius:0;">
-                    Editar
-                </a>
-
-                <a href="{% url 'apps.productos:eliminar' producto.pk %}"
-                   class="btn btn-danger" style="border-radius:0;">
-                    Eliminar
-                </a>
-                {% endif %}
-            </div>
+            <!-- Botón volver -->
+            <a href="{% url 'apps.productos:lista' %}" 
+               class="btn btn-outline-dark mt-3" 
+               style="border-radius: 0;">
+                ← Volver al catálogo
+            </a>
         </div>
-
     </div>
 
+    <!-- Mensajes -->
+    {% if messages %}
+        <div class="mt-4">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
 </div>
 {% endblock %}

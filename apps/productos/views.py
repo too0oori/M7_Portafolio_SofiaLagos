@@ -23,12 +23,14 @@ class ProductoListView(ListView):
     context_object_name = 'productos'
     paginate_by = 12
 
+
     def get_queryset(self):
         qs = Producto.objects.filter(activo=True)
 
-        categoria_id = self.request.GET.get("categoria")
-        if categoria_id:
-            qs = qs.filter(categoria_id=categoria_id)
+        categoria_slug = self.request.GET.get("categoria")
+
+        if categoria_slug:
+            qs = qs.filter(categoria__slug=categoria_slug)
 
         return qs
 

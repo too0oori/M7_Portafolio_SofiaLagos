@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 
 class Categoria(models.Model):
     """Tipos de productos: Poleras, Hoodies, Accesorios"""
@@ -6,7 +7,12 @@ class Categoria(models.Model):
     descripcion = models.TextField()
     imagen = models.ImageField(upload_to='categorias/')
     activo = models.BooleanField(default=True)
-    
+    slug = models.SlugField(unique=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.nombre)
+        super().save(*args, **kwargs)
     class Meta:
         verbose_name = "Categoría"
         verbose_name_plural = "Categorías"
