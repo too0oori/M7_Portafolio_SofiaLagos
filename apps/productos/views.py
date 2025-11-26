@@ -1,6 +1,12 @@
 
+from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from apps.productos.models import Producto
+from apps.productos.models import Producto, Categoria
+from .forms import ProductoForm
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from django.urls import reverse_lazy
+from django.contrib import messages
+
 
 class HomeView(ListView):
     """Página principal con productos destacados"""
@@ -12,20 +18,51 @@ class HomeView(ListView):
         return Producto.objects.filter(activo=True, destacado=True)[:8]
 
 class ProductoListView(ListView):
-    """Catálogo completo de productos"""
     model = Producto
     template_name = 'productos/lista.html'
     context_object_name = 'productos'
     paginate_by = 12
 
 class ProductoDetailView(DetailView):
-    """Detalle de producto individual"""
     model = Producto
     template_name = 'productos/detalle.html'
     context_object_name = 'producto'
 
+
+class CrearProductoView(CreateView):
+    model = Producto
+    template_name = 'productos/crear.html'
+    form_class = ProductoForm
+    success_url = reverse_lazy('apps.productos:lista_productos')
+
+    def form_valid(self, form):
+        messages.success(self.request, "Producto creado correctamente.")
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        messages.error(self.request, "Hubo un error al crear el producto.")
+        return super().form_invalid(form)
+
+class EliminarProductoView(DeleteView):
+    model = Producto
+    template_name = 'productos/eliminar.html'
+    success_url = reverse_lazy('apps.productos:lista_productos')
+
+    def delete(self, request, *args, **kwargs):
+        messages.warning(self.request, "Producto eliminado.")
+        return super().delete(request, *args, **kwargs)
+    
+class EditarProductoView(UpdateView):
+    model = Producto
+    template_name = 'productos/editar.html'
+    form_class = ProductoForm
+    success_url = reverse_lazy('apps.productos:lista_productos')
+
+    def form_valid(self, form):
+        messages.success(self.request, "Producto actualizado correctamente.")
+        return super().form_valid(form)
+
 class ProductosPorCategoriaView(ListView):
-    """Productos filtrados por categoría"""
     model = Producto
     template_name = 'productos/categoria.html'
     context_object_name = 'productos'
@@ -35,3 +72,11 @@ class ProductosPorCategoriaView(ListView):
             categoria__pk=self.kwargs['pk'],
             activo=True
         )
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["categoria"] = Categoria.objects.get(pk=self.kwargs["pk"])
+        return context
+    
+def archivo(request):
+    return render(request, "productos/archivo.html")

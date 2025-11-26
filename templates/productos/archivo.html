@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Archivo — A Medias Tintas{% endblock %}
+
+{% block content %}
+<div class="container text-center py-5" style="max-width: 700px;">
+
+    <h1 class="mb-4" style="font-family:'Courier New', monospace; font-weight:700;">
+        Archivo de Diseños
+    </h1>
+
+    <p class="mb-5" style="color:#555; font-size: 0.95rem;">
+        Este es un registro de ilustraciones, ideas y pruebas de estampados realizados
+        para el proyecto <strong>A Medias Tintas</strong>.  
+        Actualmente no hay elementos disponibles, pero pronto habrá contenido.
+    </p>
+
+    <img src="{% static 'images/placeholder_archive.png' %}" 
+         alt="Archivo vacío"
+         style="width: 180px; opacity: 0.6; margin-bottom:20px;">
+
+    <p style="color:#777; font-size:0.85rem;">
+        No hay archivos disponibles en este momento.
+    </p>
+
+</div>
+{% endblock %}

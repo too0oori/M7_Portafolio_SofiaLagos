@@ -6,8 +6,6 @@ from apps.pedidos import views
 app_name = 'apps.pedidos'
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('carrito/<int:pk>', views.agregar_al_carrito, name='carrito'),
-    path('detalle/<int:pk>', views.ver_carrito, name='detalle'),
-    path('pedido/<int:pk>', views.pedido, name='pedido'),
+    path('agregar/<int:producto_id>/', views.agregar_al_carrito, name='agregar'),
+    path('ver/', views.ver_carrito, name='ver'),
 ]

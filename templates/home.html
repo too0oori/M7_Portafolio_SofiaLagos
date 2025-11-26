@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - A Medias Tintas{% endblock %}
+
+{% block extra_css %}{% endblock %}
+
+{% block content %}
+
+<!-- Hero Banner -->
+<section class="hero-banner">
+    <div class="hero-content">
+        <div class="hero-label">/// SUBLIMACIÓN & SERIGRAFÍA</div>
+        <h1 class="hero-title">DISEÑOS<br>SIN<br>FILTROS</h1>
+        <p class="hero-subtitle">
+            Arte independiente impreso en prendas. Cultura visual, música, contracultura. 
+            Cada pieza cuenta una historia que merece ser llevada.
+        </p>
+        <div>
+            <a href="#productos" class="btn btn-primary-custom me-3">VER TIENDA</a>
+            <a href="#archivo" class="btn btn-secondary-custom">ARCHIVO</a>
+        </div>
+    </div>
+</section>
+
+<!-- Productos -->
+<section class="container">
+    <div class="section-header">
+        <h2 class="section-title">ESTAMPADOS</h2>
+        <p class="section-subtitle">
+            Selección de diseños actuales. Arte gráfico, bandas, cine, 
+            y referencias visuales que van más allá de lo convencional.
+        </p>
+    </div>
+    
+    <div id="productos">
+        {% if productos_destacados %}
+            <div class="product-grid">
+                {% for producto in productos_destacados %}
+                <a href="{% url 'apps.productos:detalle_producto' producto.pk %}" class="product-item">
+                    <div style="position: relative;">
+                        {% if producto.destacado %}
+                        <span class="product-badge">DESTACADO</span>
+                        {% endif %}
+                        
+                        {% if producto.imagen_principal %}
+                            <img src="{{ producto.imagen_principal.url }}" 
+                                 alt="{{ producto.nombre }}" 
+                                 class="producto-imagen">
+                        {% else %}
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600" 
+                                 alt="{{ producto.nombre }}" 
+                                 class="producto-imagen">
+                        {% endif %}
+                    </div>
+                    
+                    <div class="producto-info">
+                        <div class="producto-categoria">{{ producto.categoria.nombre|upper }}</div>
+                        <h3 class="producto-nombre">{{ producto.nombre|upper }}</h3>
+                        <div class="producto-precio">${{ producto.precio|floatformat:0 }}</div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            
+            <div class="text-center mb-5">
+                <a href="{% url 'apps.productos:lista' %}" class="btn btn-secondary-custom">VER TODO EL CATÁLOGO</a>
+            </div>
+        {% else %}
+            <div class="empty-state">
+                <h3>PRÓXIMAMENTE</h3>
+                <p>Preparando nuevos diseños. Vuelve pronto.</p>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Categorias -->
+<section class="categorias-section">
+    <div class="container">
+        <div class="section-header" style="padding-top: 0;">
+            <h2 class="section-title">CATEGORÍAS</h2>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="categoria-card">
+                        <img src="https://images.pexels.com/photos/14666452/pexels-photo-14666452.jpeg" 
+                             alt="Poleras" 
+                             class="categoria-imagen">
+                        <div class="categoria-overlay">
+                            <h3 class="categoria-nombre">POLERAS</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="categoria-card">
+                        <img src="https://images.pexels.com/photos/17658178/pexels-photo-17658178.jpeg" 
+                             alt="Hoodies" 
+                             class="categoria-imagen">
+                        <div class="categoria-overlay">
+                            <h3 class="categoria-name">HOODIES</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="categoria-card">
+                        <img src="https://images.unsplash.com/photo-1708944343668-eb7284d6bbf3?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                             alt="Totebags" 
+                             class="categoria-imagen">
+                        <div class="categoria-overlay">
+                            <h3 class="categoria-nombre">TOTEBAGS</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Banner -->
+<div id ="archivo">
+    <section class="featured-banner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="featured-content">
+                        <span class="featured-tag">/// EDICIÓN LIMITADA</span>
+                        <h2 class="featured-title">ARCHIVO 2024</h2>
+                        <p class="featured-description">
+                            Colección de diseños gráficos experimentales. Referencias visuales 
+                            de cine, música independiente, arte urbano y cultura alternativa. 
+                            Cada estampado es una pieza única de expresión visual.
+                        </p>
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'apps.productos:archivo' %}" class="btn btn-primary-custom" style="background-color: #d32f2f; border-color: #d32f2f;">
+                                EXPLORAR ARCHIVO
+                            </a>
+                        {% else %}
+                            <a href="{% url 'apps.usuarios:registro' %}" class="btn btn-primary-custom" style="background-color: #d32f2f; border-color: #d32f2f;">
+                                ÚNETE Y EXPLORA
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="https://images.unsplash.com/photo-1572375992501-4b0892d50c69?q=80&w=773&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                        alt="Colección" 
+                        style="width: 100%; height: auto; border: 3px solid #fff;">
+                </div>
+            </div>
+        </div>
+    </section>    
+</div>
+
+{% endblock %}

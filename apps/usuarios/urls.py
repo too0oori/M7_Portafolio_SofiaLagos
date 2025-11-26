@@ -3,6 +3,8 @@
 from django.urls import path
 from . import views
 
+app_name = 'apps.usuarios'
+
 urlpatterns = [
     # Autenticación
     path('registro/', views.registro_view, name='registro'),

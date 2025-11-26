@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Productos — A Medias Tintas{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <h1 class="mb-4" style="font-family:'Courier New', monospace; font-weight:700;">
+        Productos
+    </h1>
+
+    {% if user.is_staff %}
+    <!-- Botón para crear producto -->
+    <div class="mb-4">
+        <a href="{% url 'apps.productos:crear' %}" 
+           class="btn"
+           style="background:black; color:white; border-radius:0; font-weight:700;">
+            + Agregar Producto
+        </a>
+    </div>
+    {% endif %}
+
+    <!-- LISTA DE PRODUCTOS -->
+    <div class="row g-4">
+
+        {% for p in productos %}
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100" style="border-radius:0;">
+
+                {% if p.imagen %}
+                <img src="{{ p.imagen.url }}" class="card-img-top" alt="{{ p.nombre }}"
+                     style="border-radius:0; object-fit:cover; height:260px;">
+                {% else %}
+                <img src="{% static 'images/placeholder.png' %}" 
+                     class="card-img-top" alt="Sin imagen"
+                     style="border-radius:0; object-fit:cover; height:260px;">
+                {% endif %}
+
+                <div class="card-body">
+
+                    <h5 class="card-title" style="font-weight:700; font-family:'Courier New';">
+                        {{ p.nombre }}
+                    </h5>
+
+                    <p style="font-size:0.9rem; color:#444;">
+                        ${{ p.precio }}
+                    </p>
+
+                    <div class="d-flex gap-2 mt-3">
+
+                        <!-- Ver producto -->
+                        <a href="{% url 'apps.productos:detalle_producto' p.id %}" 
+                           class="btn btn-sm"
+                           style="border:1px solid black; border-radius:0;">
+                            Ver
+                        </a>
+                        {% if user.is_staff %}
+                        <!-- Editar producto -->
+                        <a href="{% url 'apps.productos:editar' p.id %}" 
+                           class="btn btn-sm"
+                           style="border:1px solid black; border-radius:0;">
+                            Editar
+                        </a>
+
+                        <!-- Eliminar producto -->
+                        <a href="{% url 'apps.productos:eliminar' p.id %}" 
+                           class="btn btn-sm"
+                           style="border:1px solid black; border-radius:0; color:#b30000;">
+                            Eliminar
+                        </a>
+                        {% endif %}
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {% empty %}
+            <p class="text-muted">No hay productos disponibles.</p>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Iniciar Sesión — A Medias Tintas{% endblock %}
+
+{% block content %}
+<div class="container py-5" style="max-width: 500px;">
+
+    <h2 class="text-center mb-4" style="font-family:'Courier New', monospace; font-weight:700;">
+        Iniciar Sesión
+    </h2>
+
+    <div class="card p-4 shadow-sm" style="border-radius:0;">
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label class="form-label" style="font-weight:600; font-size:0.9rem;">
+                    Usuario
+                </label>
+                <input type="text" name="username" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" style="font-weight:600; font-size:0.9rem;">
+                    Contraseña
+                </label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn w-100"
+                    style="background:black; color:white; border-radius:0; font-weight:700;">
+                Entrar
+            </button>
+        </form>
+    </div>
+
+    <p class="text-center mt-3" style="font-size:0.9rem;">
+        ¿No tienes cuenta?
+        <a href="{% url 'apps.usuarios:registro' %}" style="text-decoration:underline;">Regístrate aquí</a>
+    </p>
+
+</div>
+{% endblock %}

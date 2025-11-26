@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
 from apps.productos.models import Producto
-from .models import Carrito, ItemCarrito, Pedido, DetallePedido
+from .models import Carrito, ItemCarrito, Pedido, DetallePedido, Talla
 from django.template import context
 
 @login_required
@@ -16,7 +16,16 @@ def agregar_al_carrito(request, producto_id):
     carrito, created = Carrito.objects.get_or_create(user=request.user)
 
     # Agregar el producto al carrito
-    carrito.items.create(producto=producto, talla=talla_id, cantidad=cantidad)
+    talla = get_object_or_404(Talla, pk=talla_id)
+    item, created = ItemCarrito.objects.get_or_create(
+        carrito=carrito,
+        producto=producto,
+        talla=talla,
+        defaults={'cantidad': cantidad}
+    )
+    if not created:
+        item.cantidad += cantidad
+        item.save()
 
     # Redirigir al carrito 
 

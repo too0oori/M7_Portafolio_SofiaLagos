@@ -58,6 +58,9 @@ class Carrito(models.Model):
         verbose_name = "Carrito"
         verbose_name_plural = "Carritos"
     
+    def get_total(self):
+        return sum(item.producto.precio * item.cantidad for item in self.items.all())
+
     def __str__(self):
         return f"Carrito de {self.user.username}"
 

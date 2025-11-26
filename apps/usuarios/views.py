@@ -50,9 +50,9 @@ def login_view(request):
             login(request, user)
             messages.success(request, f'¡Bienvenido de vuelta, {user.username}!')
             
-            # Redirigir a la página anterior o a home
-            next_url = request.GET.get('next', 'home')
-            return redirect(next_url)
+            # Redirigir  a home
+            return redirect('apps.productos:home')
+            
         else:
             messages.error(request, 'Usuario o contraseña incorrectos.')
     
@@ -66,7 +66,7 @@ def logout_view(request):
     """
     logout(request)
     messages.info(request, 'Has cerrado sesión correctamente.')
-    return redirect('home')
+    return redirect('apps.productos:home')
 
 
 @login_required
