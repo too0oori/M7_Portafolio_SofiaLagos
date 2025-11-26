@@ -23,21 +23,25 @@ class ProductoListView(ListView):
     context_object_name = 'productos'
     paginate_by = 12
 
-
     def get_queryset(self):
         qs = Producto.objects.filter(activo=True)
 
-        categoria_slug = self.request.GET.get("categoria")
+        categoria = self.request.GET.get("categoria")
 
-        if categoria_slug:
-            qs = qs.filter(categoria__slug=categoria_slug)
+        if categoria:
+            qs = qs.filter(categoria_id=categoria)
 
         return qs
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+
+        # lista de categorías
         context["categorias"] = Categoria.objects.all()
+
+        # categoría seleccionada actualmente
         context["categoria_actual"] = self.request.GET.get("categoria")
+
         return context
 
 class ProductoDetailView(DetailView):

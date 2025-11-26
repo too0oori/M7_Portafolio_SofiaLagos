@@ -26,7 +26,7 @@ def registro_view(request):
             
             login(request, user)
             messages.success(request, f'¡Bienvenido a A Medias Tintas, {user.username}!')
-            return redirect('home')
+            return redirect('apps.productos:home')
     else:
         form = RegistroForm()
     
@@ -38,7 +38,7 @@ def login_view(request):
     Vista de login de usuarios
     """
     if request.user.is_authenticated:
-        return redirect('home')
+        return redirect('apps.productos:home')
     
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -71,18 +71,16 @@ def logout_view(request):
 
 @login_required
 def perfil_view(request):
-    """
-    Vista del perfil del usuario 
-    Muestra información del usuario, perfil y direcciones
-    """
-    perfil = request.user.perfil
-    direcciones = request.user.direcciones.all()
-    
-    context = {
-        'perfil': perfil,
-        'direcciones': direcciones,
-    }
-    return render(request, 'usuarios/perfil.html', context)
+    perfil = request.user.perfil 
+
+    pedidos = None
+    if hasattr(request.user, "pedido_set"):
+        pedidos = request.user.pedido_set.all()
+
+    return render(request, "usuarios/perfil.html", {
+        "perfil": perfil,
+        "pedidos": pedidos,
+    })
 
 
 class PerfilUpdateView(LoginRequiredMixin, UpdateView):
@@ -92,7 +90,7 @@ class PerfilUpdateView(LoginRequiredMixin, UpdateView):
     model = Perfil
     form_class = PerfilForm
     template_name = 'usuarios/editar_perfil.html'
-    success_url = reverse_lazy('perfil')
+    success_url = reverse_lazy('apps.usuarios:perfil')
     
     def get_object(self):
         # Obtener el perfil del usuario actual

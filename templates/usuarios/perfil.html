@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Mi Perfil — A Medias Tintas{% endblock %}
+
+{% block content %}
+
+<div class="container py-5" style="max-width: 800px;">
+    
+    <h1 class="mb-4" style="font-family:'Courier New'; font-weight:900;">
+        Mi Perfil
+    </h1>
+
+    <div class="card shadow-sm p-4" style="border-radius: 0;">
+
+        <div class="row align-items-center">
+
+            <!-- Avatar -->
+            <div class="col-md-4 text-center">
+                {% if perfil.imagen %}
+                    <img src="{{ perfil.imagen.url }}" 
+                         alt="Foto de perfil"
+                         class="img-fluid mb-3"
+                         style="border: 2px solid #000; border-radius: 0;">
+                {% else %}
+                    <img src="{% static 'images/avatar-default.png' %}"
+                         alt="Avatar por defecto"
+                         class="img-fluid mb-3"
+                         style="border: 2px solid #000; border-radius: 0;">
+                {% endif %}
+            </div>
+
+            <!-- Información -->
+            <div class="col-md-8">
+
+                <h3 style="font-family: 'Courier New'; font-weight: 700;">
+                    @{{ request.user.username }}
+                </h3>
+
+                <p><strong>Email:</strong> {{ request.user.email }}</p>
+
+                {% if perfil.bio %}
+                    <p><strong>Bio:</strong> {{ perfil.bio }}</p>
+                {% endif %}
+
+                {% if perfil.telefono %}
+                    <p><strong>Teléfono:</strong> {{ perfil.telefono }}</p>
+                {% endif %}
+
+                {% if perfil.direccion %}
+                    <p><strong>Dirección:</strong> {{ perfil.direccion }}</p>
+                {% endif %}
+
+                <!-- Botones -->
+                <div class="d-flex gap-2 mt-3 flex-wrap">
+                    <a href="{% url 'apps.usuarios:editar_perfil' %}" 
+                       class="btn btn-dark"
+                       style="border-radius:0;">
+                        Editar perfil
+                    </a>
+
+                    <a href="{% url 'apps.usuarios:logout' %}" 
+                       class="btn btn-outline-dark"
+                       style="border-radius:0;">
+                        Cerrar sesión
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Separador -->
+        <hr class="my-4">
+
+        <!-- Historial de pedidos (opcional si tienes app pedidos) -->
+        {% if pedidos %}
+            <h4 class="mb-3" style="font-family:'Courier New'; font-weight:700;">
+                Mis pedidos
+            </h4>
+
+            {% if pedidos.count > 0 %}
+                <ul class="list-group">
+                    {% for pedido in pedidos %}
+                        <li class="list-group-item d-flex justify-content-between"
+                            style="border-radius:0;">
+                            <span>
+                                Pedido #{{ pedido.id }} — {{ pedido.fecha|date:"d M Y" }}
+                            </span>
+                            <span>
+                                ${{ pedido.total }}
+                            </span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="text-muted">No tienes pedidos aún.</p>
+            {% endif %}
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% endblock %}
