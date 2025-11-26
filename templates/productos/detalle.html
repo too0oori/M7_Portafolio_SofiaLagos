@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-4 mb-5">
+
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            {% if producto.imagen_principal %}
+                <img 
+                    src="{{ producto.imagen_principal.url }}" 
+                    alt="{{ producto.nombre }}"
+                    class="img-fluid border"
+                    style="border-radius:0;">
+            {% else %}
+                <img 
+                    src="{% static 'images/sin-imagen.JPG' %}" 
+                    alt="Sin imagen"
+                    class="img-fluid border"
+                    style="border-radius:0;">
+            {% endif %}
+        </div>
+
+        <div class="col-md-6">
+            <div class="p-4 border" style="border-radius:0;">
+                
+                <h2 class="mb-3" style="font-family:'Courier New', monospace;">
+                    {{ producto.nombre }}
+                </h2>
+
+                <p class="mb-2">
+                    <strong>Precio:</strong> ${{ producto.precio }}
+                </p>
+
+                <p class="mb-2">
+                    <strong>Descripción:</strong> {{ producto.descripcion }}
+                </p>
+
+                <p class="mb-4">
+                    <strong>Categoría:</strong> {{ producto.categoria.nombre }}
+                </p>
+
+                {% if user.is_staff %}
+                <a href="{% url 'apps.productos:editar' producto.pk %}" 
+                   class="btn btn-dark me-2" style="border-radius:0;">
+                    Editar
+                </a>
+
+                <a href="{% url 'apps.productos:eliminar' producto.pk %}"
+                   class="btn btn-danger" style="border-radius:0;">
+                    Eliminar
+                </a>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

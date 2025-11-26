@@ -23,6 +23,21 @@ class ProductoListView(ListView):
     context_object_name = 'productos'
     paginate_by = 12
 
+    def get_queryset(self):
+        qs = Producto.objects.filter(activo=True)
+
+        categoria_id = self.request.GET.get("categoria")
+        if categoria_id:
+            qs = qs.filter(categoria_id=categoria_id)
+
+        return qs
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["categorias"] = Categoria.objects.all()
+        context["categoria_actual"] = self.request.GET.get("categoria")
+        return context
+
 class ProductoDetailView(DetailView):
     model = Producto
     template_name = 'productos/detalle.html'
@@ -31,7 +46,7 @@ class ProductoDetailView(DetailView):
 
 class CrearProductoView(CreateView):
     model = Producto
-    template_name = 'productos/crear.html'
+    template_name = 'productos/formulario.html'
     form_class = ProductoForm
     success_url = reverse_lazy('apps.productos:lista_productos')
 
@@ -54,29 +69,13 @@ class EliminarProductoView(DeleteView):
     
 class EditarProductoView(UpdateView):
     model = Producto
-    template_name = 'productos/editar.html'
+    template_name = 'productos/formulario.html'
     form_class = ProductoForm
     success_url = reverse_lazy('apps.productos:lista_productos')
 
     def form_valid(self, form):
         messages.success(self.request, "Producto actualizado correctamente.")
         return super().form_valid(form)
-
-class ProductosPorCategoriaView(ListView):
-    model = Producto
-    template_name = 'productos/categoria.html'
-    context_object_name = 'productos'
-    
-    def get_queryset(self):
-        return Producto.objects.filter(
-            categoria__pk=self.kwargs['pk'],
-            activo=True
-        )
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["categoria"] = Categoria.objects.get(pk=self.kwargs["pk"])
-        return context
     
 def archivo(request):
     return render(request, "productos/archivo.html")
