@@ -328,3 +328,5 @@ Imágenes de bandas, películas y animes usadas únicamente con fines académico
 Derechos de autor pertenecen a los respectivos autores/productores.
 
 Gracias a los artistas, estudios y productoras por su trabajo que me encanta <3
+
+A medias tintas fue un proyecto de un amigo, donde yo hice la identidad visual, logo y mockups, que decidí reutilizar para la tarea :D
