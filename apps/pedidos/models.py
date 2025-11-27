@@ -47,35 +47,3 @@ class DetallePedido(models.Model):
     
     def __str__(self):
         return f"{self.cantidad}x {self.producto.nombre}"
-
-class Carrito(models.Model):
-    """Carrito temporal del usuario"""
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    fecha_creacion = models.DateTimeField(auto_now_add=True)
-    fecha_actualizacion = models.DateTimeField(auto_now=True)
-    
-    class Meta:
-        verbose_name = "Carrito"
-        verbose_name_plural = "Carritos"
-    
-    def get_total(self):
-        return sum(item.producto.precio * item.cantidad for item in self.items.all())
-
-    def __str__(self):
-        return f"Carrito de {self.user.username}"
-
-class ItemCarrito(models.Model):
-    """Items dentro del carrito"""
-    carrito = models.ForeignKey(Carrito, on_delete=models.CASCADE, related_name='items')
-    producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
-    talla = models.ForeignKey(Talla, on_delete=models.CASCADE)
-    cantidad = models.IntegerField(default=1)
-    
-    class Meta:
-        unique_together = ['carrito', 'producto', 'talla']
-        verbose_name = "Item del Carrito"
-        verbose_name_plural = "Items del Carrito"
-    
-    def __str__(self):
-        return f"{self.cantidad}x {self.producto.nombre} - Talla {self.talla.nombre}"
-

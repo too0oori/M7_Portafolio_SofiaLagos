@@ -1,5 +1,3 @@
-#urls de app pedidos
-
 from django.urls import path
 from apps.pedidos import views
 

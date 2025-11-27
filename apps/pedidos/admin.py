@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.pedidos.models import Pedido, DetallePedido, Carrito, ItemCarrito
+from apps.pedidos.models import Pedido, DetallePedido
 
 #Inline para ver detalles dentro del pedido
 class DetallePedidoInline(admin.TabularInline):
@@ -33,13 +33,3 @@ class DetallePedidoAdmin(admin.ModelAdmin):
     list_display = ('pedido', 'producto', 'cantidad', 'precio_unitario', 'subtotal', 'talla')
     list_filter = ('pedido', 'producto', 'talla')
     search_fields = ('pedido__cliente__username', 'producto__nombre')
-
-@admin.register(Carrito)
-class CarritoAdmin(admin.ModelAdmin):
-    list_display = ('user', 'fecha_creacion', 'fecha_actualizacion')
-    search_fields = ('user__username', 'user__email')
-
-@admin.register(ItemCarrito)
-class ItemCarritoAdmin(admin.ModelAdmin):
-    list_display = ('carrito', 'producto', 'talla', 'cantidad')
-    list_filter = ('carrito', 'producto', 'talla')

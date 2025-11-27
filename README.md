@@ -112,6 +112,15 @@ DATABASES = {
 }
 ```
 
+## Integración con Base de Datos
+
+Django se conecta a SQLite3 mediante su ORM (Object-Relational Mapping), que traduce 
+las operaciones Python a SQL automáticamente. La configuración en `settings.py` define:
+
+- **ENGINE**: Motor de BD (sqlite3, postgresql, mysql)
+- **NAME**: Ruta del archivo de base de datos
+- El ORM gestiona conexiones automáticamente mediante connection pooling
+
 **Ejemplo de modelo:**
 ```python
 class Producto(models.Model):
@@ -175,27 +184,33 @@ python manage.py migrate
 python manage.py showmigrations
 ```
 
-### Requerimiento 5: Consultas ORM
+## 📊 Consultas ORM
 
+### Consultas en Producción (views.py)
+Las consultas reales del sistema están integradas en las vistas:
 ```python
-# Filtrar productos activos
-qs = Producto.objects.filter(activo=True)
+# Filtrado básico
+Producto.objects.filter(activo=True, destacado=True)
 
-# Filtrar por categoría
-qs = qs.filter(categoria_id=categoria)
+# Filtrado condicional por categoría
+qs.filter(categoria_id=categoria)
 
-# Ordenar por productos activos
-Producto.objects.filter(activo=True, destacado=True)[:8]
+# Obtención segura de objetos
+get_object_or_404(Producto, pk=pk)
 
-# Obtener un registro
-producto = get_object_or_404(Producto, pk=pk, activo=True)
-
-# Relaciones M:N
+# Relaciones Many-to-Many
 producto.etiquetas.all()
-
-# Relaciones ForeignKey inversas
 producto.producto_tallas.all()
 ```
+
+### Consultas de Ejemplo (queries.py)
+Archivo con consultas didácticas que demuestran capacidades adicionales del ORM:
+- `aggregate()` para cálculos estadísticos
+- `annotate()` para agregar campos calculados
+- `Q()` para búsquedas con OR lógico
+- `filter()` con condiciones complejas
+
+**Ubicación:** `apps/productos/queries.py`
 
 ### Requerimiento 6: CRUD Completo
 
@@ -247,6 +262,15 @@ Carrito
 ConfiguracionSitio
   (sin relaciones)
 ```
+
+---
+
+## 🛠️ Desafíos del Desarrollo
+
+Durante este proyecto aprendí:
+- Cómo funcionan las relaciones ManyToMany con tabla intermedia
+- La diferencia entre usar sesiones vs modelos para el carrito
+- A optimizar consultas con select_related()
 
 ---
 

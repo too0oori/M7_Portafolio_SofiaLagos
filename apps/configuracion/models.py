@@ -2,6 +2,8 @@ from django.db import models
 
 
 class ConfiguracionSitio(models.Model):
+    # Este modelo me costó entender al principio, pero básicamente
+    # guarda configuraciones globales del sitio sin relacionarse con nada
     """Configuración global - para requisito de modelo sin relaciones"""
     nombre_sitio = models.CharField(max_length=100, default="A Medias Tintas")
     email_contacto = models.EmailField(default="contacto@amediastintas.cl")
