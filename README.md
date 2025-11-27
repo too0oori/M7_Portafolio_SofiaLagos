@@ -252,13 +252,24 @@ ConfiguracionSitio
 
 ## 📸 Capturas
 
-*(Agregar screenshots del proyecto)*
+![Pantalla de inicio](screenshots/inicio.JPG)
 
+## 🛒 Catálogo
+![Listado de productos](screenshots/catalogo.JPG)
+
+## Categorias
+![Pantalla de inicio](screenshots/categorias.JPG)
+
+## 🛒 Carrito
+![Listado de productos](screenshots/carrito.JPG)
+
+## Perfil
+![Pantalla de inicio](screenshots/perfil.JPG)
 ---
 
 ## 👤 Autor
 
-**[Tu Nombre]**  
+**[Sofía Lagos / Tori]**  
 GitHub: [@too0oori](https://github.com/too0oori)  
 Email: sofia.lagos.cesped@gmail.com
 
