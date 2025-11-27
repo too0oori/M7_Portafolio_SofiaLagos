@@ -11,9 +11,11 @@ Proyecto de e-commerce de poleras estampadas con estética punk, anime y varias,
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Requerimientos Cumplidos](#requerimientos-cumplidos)
 - [Modelos y Relaciones](#modelos-y-relaciones)
-- [Consultas ORM](#consultas-orm)
-- [Apps Preinstaladas](#apps-preinstaladas)
-- [Créditos](#créditos)
+- [Desafíos del Desarrollo](#desafíos-del-desarrollo)
+- [Capturas](#capturas)
+- [Autor](#autor)
+- [Licencia](#licencia)
+- [Créditos de Imágenes](#créditos-de-imágenes)
 
 ---
 
@@ -62,12 +64,12 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 6. Crear superusuario
+### 5. Crear superusuario
 ```bash
 python manage.py createsuperuser
 ```
 
-### 7. Ejecutar el servidor
+### 6. Ejecutar el servidor
 ```bash
 python manage.py runserver
 ```
@@ -112,7 +114,7 @@ DATABASES = {
 }
 ```
 
-## Integración con Base de Datos
+#### Integración con Base de Datos
 
 Django se conecta a SQLite3 mediante su ORM (Object-Relational Mapping), que traduce 
 las operaciones Python a SQL automáticamente. La configuración en `settings.py` define:
@@ -179,15 +181,21 @@ class ProductoTalla(models.Model):
 ### Requerimiento 4: Migraciones
 
 ```bash
-python manage.py makemigrations
-python manage.py migrate
+# Ver estado de migraciones
 python manage.py showmigrations
+
+# Crear migraciones después de cambios en models.py
+python manage.py makemigrations
+
+# Aplicar migraciones
+python manage.py migrate
 ```
 
-## 📊 Consultas ORM
+### Requerimiento 5: Consultas ORM
 
-### Consultas en Producción (views.py)
+#### Consultas en Producción (views.py)
 Las consultas reales del sistema están integradas en las vistas:
+
 ```python
 # Filtrado básico
 Producto.objects.filter(activo=True, destacado=True)
@@ -203,7 +211,7 @@ producto.etiquetas.all()
 producto.producto_tallas.all()
 ```
 
-### Consultas de Ejemplo (queries.py)
+#### Consultas de Ejemplo (queries.py)
 Archivo con consultas didácticas que demuestran capacidades adicionales del ORM:
 - `aggregate()` para cálculos estadísticos
 - `annotate()` para agregar campos calculados
@@ -241,8 +249,7 @@ class ProductoAdmin(admin.ModelAdmin):
 User (Django Auth)
   ├─ 1:1 → Perfil
   ├─ 1:N → Direccion
-  ├─ 1:N → Pedido
-  └─ 1:1 → Carrito
+  └─ 1:N → Pedido
 
 Categoria
   └─ 1:N → Producto
@@ -255,9 +262,6 @@ Producto
 Pedido
   ├─ 1:N → DetallePedido
   └─ ForeignKey → Direccion
-
-Carrito
-  └─ 1:N → ItemCarrito
 
 ConfiguracionSitio
   (sin relaciones)
@@ -276,24 +280,26 @@ Durante este proyecto aprendí:
 
 ## 📸 Capturas
 
+### Pantalla de Inicio
 ![Pantalla de inicio](screenshots/inicio.JPG)
 
-## 🛒 Catálogo
+### Catálogo
 ![Listado de productos](screenshots/catalogo.JPG)
 
-## Categorias
-![Pantalla de inicio](screenshots/categorias.JPG)
+### Categorías
+![Categorías](screenshots/categorias.JPG)
 
-## 🛒 Carrito
-![Listado de productos](screenshots/carrito.JPG)
+### Carrito
+![Carrito de compras](screenshots/carrito.JPG)
 
-## Perfil
-![Pantalla de inicio](screenshots/perfil.JPG)
+### Perfil
+![Perfil de usuario](screenshots/perfil.JPG)
+
 ---
 
 ## 👤 Autor
 
-**[Sofía Lagos / Tori]**  
+**Sofía Lagos / Tori**  
 GitHub: [@too0oori](https://github.com/too0oori)  
 Email: sofia.lagos.cesped@gmail.com
 
@@ -315,7 +321,7 @@ Este proyecto demuestra:
 - ✅ Uso efectivo de apps preinstaladas de Django
 - ✅ Arquitectura MVC bien estructurada
 
-## 📸 Créditos de imágenes
+## 📸 Créditos de Imágenes
 
 Imágenes de bandas, películas y animes usadas únicamente con fines académicos y de demostración.
 
