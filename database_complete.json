@@ -1,0 +1,2315 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "password": "pbkdf2_sha256$1000000$Pz4xIHEq33WIfmNb0oM9hS$9tSO8FD5ZmcwPVXdpWWD20PpxQdqw3/VyK5SwqWEi8U=",
+      "last_login": "2025-11-26T22:52:04.879147+00:00",
+      "is_superuser": true,
+      "username": "tori",
+      "first_name": "",
+      "last_name": "",
+      "email": "tori@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-11-26T19:49:26.365064+00:00",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "password": "pbkdf2_sha256$1000000$cbmdPVKCIm7gvaxFHD8VbM$f+0kLpNiQHktgucC1vip9q6dTboVRqfwhyUj2Iql9Qw=",
+      "last_login": "2025-11-26T22:19:02.865172+00:00",
+      "is_superuser": false,
+      "username": "torii",
+      "first_name": "Sofia",
+      "last_name": "Lagos",
+      "email": "sofia.aaa@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-11-26T22:18:48.615006+00:00",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "password": "pbkdf2_sha256$1000000$ePgFIiTgvkta2crBoXlR9y$03BF8CbVR3wKX1gwOCPE4ucFpIS2S4ALSgX+31GHVXE=",
+      "last_login": "2025-11-26T22:20:00.634939+00:00",
+      "is_superuser": false,
+      "username": "toriii",
+      "first_name": "Sofia",
+      "last_name": "Lagos",
+      "email": "sofia@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-11-26T22:19:59.369957+00:00",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "password": "pbkdf2_sha256$1000000$ovhxUCrDDp3qUYrLMeRYNH$WW1s/yQ9uZkv3+/VSjyFXEUvn40xl1B4OOw6WCWpd/A=",
+      "last_login": "2025-11-27T00:44:18.363968+00:00",
+      "is_superuser": false,
+      "username": "too0oori",
+      "first_name": "Sofia",
+      "last_name": "Lagos",
+      "email": "sofiaxx@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-11-26T22:20:50.301965+00:00",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "usuarios.perfil",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "user": 2,
+      "telefono": "",
+      "fecha_nacimiento": null,
+      "avatar": ""
+    }
+  },
+  {
+    "model": "usuarios.perfil",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "user": 3,
+      "telefono": "",
+      "fecha_nacimiento": null,
+      "avatar": ""
+    }
+  },
+  {
+    "model": "usuarios.perfil",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "user": 4,
+      "telefono": "",
+      "fecha_nacimiento": null,
+      "avatar": ""
+    }
+  },
+  {
+    "model": "productos.categoria",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "nombre": "Poleras Manga Corta",
+      "descripcion": "Poleras básicas de algodón 100% con estampados serigráficos",
+      "imagen": "",
+      "activo": true,
+      "slug": "poleras-manga-corta"
+    }
+  },
+  {
+    "model": "productos.categoria",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "nombre": "Poleras Manga Larga",
+      "descripcion": "Poleras de algodón con mangas largas ideales para el frío",
+      "imagen": "",
+      "activo": true,
+      "slug": "poleras-manga-larga"
+    }
+  },
+  {
+    "model": "productos.categoria",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "nombre": "Hoodies",
+      "descripcion": "Poleras con capucha y bolsillo canguro",
+      "imagen": "",
+      "activo": true,
+      "slug": "hoodies"
+    }
+  },
+  {
+    "model": "productos.categoria",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "nombre": "Totebags",
+      "descripcion": "Bolsos de tela estampados",
+      "imagen": "",
+      "activo": true,
+      "slug": "totebags"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 23,
+    "fields": {
+      "id": 23,
+      "nombre": "Hoodie Arte Louise Bourgeois",
+      "descripcion": "Hoodie con Arte de Louise Bourgeois, Maman",
+      "precio": "32990.00",
+      "stock": 20,
+      "categoria": 3,
+      "imagen_principal": "productos/louise.jpg",
+      "fecha_creacion": "2025-11-26T19:48:13.822702+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 22,
+    "fields": {
+      "id": 22,
+      "nombre": "Polera Ojos",
+      "descripcion": "Distorsion",
+      "precio": "16990.00",
+      "stock": 22,
+      "categoria": 2,
+      "imagen_principal": "productos/ojos.jpg",
+      "fecha_creacion": "2025-11-26T19:48:13.670212+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 21,
+    "fields": {
+      "id": 21,
+      "nombre": "Totebag Resist",
+      "descripcion": "Bolso de tela con estampado de protesta.",
+      "precio": "8990.00",
+      "stock": 50,
+      "categoria": 4,
+      "imagen_principal": "productos/tote.jpg",
+      "fecha_creacion": "2025-11-26T19:48:13.520078+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 20,
+    "fields": {
+      "id": 20,
+      "nombre": "Polera Palestina Resiste",
+      "descripcion": "Collage",
+      "precio": "17990.00",
+      "stock": 15,
+      "categoria": 1,
+      "imagen_principal": "productos/palestina.jpg",
+      "fecha_creacion": "2025-11-26T19:48:13.365469+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 19,
+    "fields": {
+      "id": 19,
+      "nombre": "Polera Kill Bill",
+      "descripcion": "Inspirada en la película de Tarantino",
+      "precio": "16990.00",
+      "stock": 25,
+      "categoria": 1,
+      "imagen_principal": "productos/killbill.jpg",
+      "fecha_creacion": "2025-11-26T19:48:13.225095+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 18,
+    "fields": {
+      "id": 18,
+      "nombre": "Polera La Haine",
+      "descripcion": "Blanco y negro crudo. Diseño urbano inspirado en el film francés.",
+      "precio": "15990.00",
+      "stock": 30,
+      "categoria": 1,
+      "imagen_principal": "productos/lahaine.jpg",
+      "fecha_creacion": "2025-11-26T19:48:12.920247+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 17,
+    "fields": {
+      "id": 17,
+      "nombre": "Polera Terciopelo Azul",
+      "descripcion": "Surrealismo lynchiano. Oreja en campo con rosas rojas. Diseño perturbador y hermoso.",
+      "precio": "17990.00",
+      "stock": 18,
+      "categoria": 2,
+      "imagen_principal": "productos/bluevelvet.jpg",
+      "fecha_creacion": "2025-11-26T19:48:12.791057+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 16,
+    "fields": {
+      "id": 16,
+      "nombre": "Polera 400 Golpes",
+      "descripcion": "Homenaje a la nouvelle vague francesa. Ilustración minimalista de Antoine Doinel.",
+      "precio": "16990.00",
+      "stock": 25,
+      "categoria": 1,
+      "imagen_principal": "productos/400golpes.jpg",
+      "fecha_creacion": "2025-11-26T19:48:12.625084+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 15,
+    "fields": {
+      "id": 15,
+      "nombre": "Polera Almodóvar",
+      "descripcion": "Tributo a Todo Sobre Mi Madre. Diseño colorido con elementos del film.",
+      "precio": "17990.00",
+      "stock": 20,
+      "categoria": 1,
+      "imagen_principal": "productos/todosobremimadre.jpg",
+      "fecha_creacion": "2025-11-26T19:48:12.453798+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 14,
+    "fields": {
+      "id": 14,
+      "nombre": "Hoodie Chungking Express",
+      "descripcion": "Collage romántico inspirado en Wong Kar-wai. California Dreamin' en la espalda.",
+      "precio": "29990.00",
+      "stock": 15,
+      "categoria": 3,
+      "imagen_principal": "productos/chunking.jpg",
+      "fecha_creacion": "2025-11-26T19:48:12.297988+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 13,
+    "fields": {
+      "id": 13,
+      "nombre": "Polera Fallen Angels",
+      "descripcion": "Homenaje al noir hongkonés. Ilustración de neón borroso y melancolía urbana.",
+      "precio": "18990.00",
+      "stock": 22,
+      "categoria": 1,
+      "imagen_principal": "productos/fallenangels.jpg",
+      "fecha_creacion": "2025-11-26T19:48:12.139833+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 12,
+    "fields": {
+      "id": 12,
+      "nombre": "Polera Crystal Castles",
+      "descripcion": "Crystal Castles (III)",
+      "precio": "17990.00",
+      "stock": 20,
+      "categoria": 2,
+      "imagen_principal": "productos/cc.jpg",
+      "fecha_creacion": "2025-11-26T19:48:11.990115+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 11,
+    "fields": {
+      "id": 11,
+      "nombre": "Polera T.A.M",
+      "descripcion": "Diseño crudo inspirado en la escena hardcore chilena. Estética DIY con textura vintage.",
+      "precio": "14990.00",
+      "stock": 28,
+      "categoria": 1,
+      "imagen_principal": "productos/tam.jpg",
+      "fecha_creacion": "2025-11-26T19:48:11.820807+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 10,
+    "fields": {
+      "id": 10,
+      "nombre": "Polera Pánico",
+      "descripcion": "Homenaje a los pioneros del noise rock chileno.",
+      "precio": "15990.00",
+      "stock": 35,
+      "categoria": 1,
+      "imagen_principal": "productos/panico.jpg",
+      "fecha_creacion": "2025-11-26T19:48:11.649945+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 9,
+    "fields": {
+      "id": 9,
+      "nombre": "Polera Sonic Youth",
+      "descripcion": "Collage",
+      "precio": "16990.00",
+      "stock": 25,
+      "categoria": 1,
+      "imagen_principal": "productos/sonicyouth.jpg",
+      "fecha_creacion": "2025-11-26T19:48:11.483058+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 8,
+    "fields": {
+      "id": 8,
+      "nombre": "Hoodie Pink (Boris)",
+      "descripcion": "Tributo a la banda japonesa de drone/shoegaze",
+      "precio": "31990.00",
+      "stock": 12,
+      "categoria": 3,
+      "imagen_principal": "productos/boris.jpg",
+      "fecha_creacion": "2025-11-26T19:48:11.317769+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 7,
+    "fields": {
+      "id": 7,
+      "nombre": "Polera My Bloody Valentine",
+      "descripcion": "Homenaje al disco definitivo del shoegaze. Diseño abstracto inspirado en la portada.",
+      "precio": "17990.00",
+      "stock": 30,
+      "categoria": 1,
+      "imagen_principal": "productos/mbv.jpg",
+      "fecha_creacion": "2025-11-26T19:48:11.161604+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 6,
+    "fields": {
+      "id": 6,
+      "nombre": "Polera Ghost in the Shell",
+      "descripcion": "Ilustración poster",
+      "precio": "16990.00",
+      "stock": 28,
+      "categoria": 1,
+      "imagen_principal": "productos/gits.jpg",
+      "fecha_creacion": "2025-11-26T19:48:11.003091+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 5,
+    "fields": {
+      "id": 5,
+      "nombre": "Polera Belladonna",
+      "descripcion": "Tributo a Belladonna of Sadness. Ilustración art nouveau con elementos psicodélicos.",
+      "precio": "18990.00",
+      "stock": 18,
+      "categoria": 1,
+      "imagen_principal": "productos/belladona.jpg",
+      "fecha_creacion": "2025-11-26T19:48:10.826764+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "nombre": "Polera Lain",
+      "descripcion": "Arte glitch inspirado en Serial Experiments Lain. Diseño experimental.",
+      "precio": "16990.00",
+      "stock": 22,
+      "categoria": 2,
+      "imagen_principal": "productos/lain.jpg",
+      "fecha_creacion": "2025-11-26T19:48:10.674431+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "nombre": "Hoodie Akira",
+      "descripcion": "Hoodie premium con capucha doble.",
+      "precio": "29990.00",
+      "stock": 15,
+      "categoria": 3,
+      "imagen_principal": "productos/akira.jpg",
+      "fecha_creacion": "2025-11-26T19:48:10.507828+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "nombre": "Polera Paprika Dreams",
+      "descripcion": "Homenaje a la obra maestra de Satoshi Kon. Collage onírico con elementos del film.",
+      "precio": "17990.00",
+      "stock": 20,
+      "categoria": 1,
+      "imagen_principal": "productos/paprika.jpg",
+      "fecha_creacion": "2025-11-26T19:48:10.343158+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "nombre": "Polera Ángel Mecánico (Evangelion)",
+      "descripcion": "Ilustración minimalista del EVA-01 con alas de ángel. Serigrafía en 2 colores sobre algodón 100%.",
+      "precio": "15990.00",
+      "stock": 25,
+      "categoria": 1,
+      "imagen_principal": "productos/evangelion.jpg",
+      "fecha_creacion": "2025-11-26T19:48:10.185595+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.talla",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "nombre": "XS",
+      "descripcion": "Pecho: 85cm, Largo: 65cm"
+    }
+  },
+  {
+    "model": "productos.talla",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "nombre": "S",
+      "descripcion": "Pecho: 90cm, Largo: 68cm"
+    }
+  },
+  {
+    "model": "productos.talla",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "nombre": "M",
+      "descripcion": "Pecho: 95cm, Largo: 71cm"
+    }
+  },
+  {
+    "model": "productos.talla",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "nombre": "L",
+      "descripcion": "Pecho: 100cm, Largo: 74cm"
+    }
+  },
+  {
+    "model": "productos.talla",
+    "pk": 5,
+    "fields": {
+      "id": 5,
+      "nombre": "XL",
+      "descripcion": "Pecho: 110cm, Largo: 77cm"
+    }
+  },
+  {
+    "model": "productos.talla",
+    "pk": 6,
+    "fields": {
+      "id": 6,
+      "nombre": "XXL",
+      "descripcion": "Pecho: 120cm, Largo: 80cm"
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "producto": 1,
+      "talla": 1,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "producto": 1,
+      "talla": 2,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "producto": 1,
+      "talla": 3,
+      "stock": 8
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "producto": 1,
+      "talla": 4,
+      "stock": 8
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 5,
+    "fields": {
+      "id": 5,
+      "producto": 1,
+      "talla": 5,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 6,
+    "fields": {
+      "id": 6,
+      "producto": 1,
+      "talla": 6,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 7,
+    "fields": {
+      "id": 7,
+      "producto": 2,
+      "talla": 1,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 8,
+    "fields": {
+      "id": 8,
+      "producto": 2,
+      "talla": 2,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 9,
+    "fields": {
+      "id": 9,
+      "producto": 2,
+      "talla": 3,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 10,
+    "fields": {
+      "id": 10,
+      "producto": 2,
+      "talla": 4,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 11,
+    "fields": {
+      "id": 11,
+      "producto": 2,
+      "talla": 5,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 12,
+    "fields": {
+      "id": 12,
+      "producto": 2,
+      "talla": 6,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 13,
+    "fields": {
+      "id": 13,
+      "producto": 3,
+      "talla": 1,
+      "stock": 2
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 14,
+    "fields": {
+      "id": 14,
+      "producto": 3,
+      "talla": 2,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 15,
+    "fields": {
+      "id": 15,
+      "producto": 3,
+      "talla": 3,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 16,
+    "fields": {
+      "id": 16,
+      "producto": 3,
+      "talla": 4,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 17,
+    "fields": {
+      "id": 17,
+      "producto": 3,
+      "talla": 5,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 18,
+    "fields": {
+      "id": 18,
+      "producto": 3,
+      "talla": 6,
+      "stock": 2
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 19,
+    "fields": {
+      "id": 19,
+      "producto": 4,
+      "talla": 1,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 20,
+    "fields": {
+      "id": 20,
+      "producto": 4,
+      "talla": 2,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 21,
+    "fields": {
+      "id": 21,
+      "producto": 4,
+      "talla": 3,
+      "stock": 7
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 22,
+    "fields": {
+      "id": 22,
+      "producto": 4,
+      "talla": 4,
+      "stock": 7
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 23,
+    "fields": {
+      "id": 23,
+      "producto": 4,
+      "talla": 5,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 24,
+    "fields": {
+      "id": 24,
+      "producto": 4,
+      "talla": 6,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 25,
+    "fields": {
+      "id": 25,
+      "producto": 5,
+      "talla": 1,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 26,
+    "fields": {
+      "id": 26,
+      "producto": 5,
+      "talla": 2,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 27,
+    "fields": {
+      "id": 27,
+      "producto": 5,
+      "talla": 3,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 28,
+    "fields": {
+      "id": 28,
+      "producto": 5,
+      "talla": 4,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 29,
+    "fields": {
+      "id": 29,
+      "producto": 5,
+      "talla": 5,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 30,
+    "fields": {
+      "id": 30,
+      "producto": 5,
+      "talla": 6,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 31,
+    "fields": {
+      "id": 31,
+      "producto": 6,
+      "talla": 1,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 32,
+    "fields": {
+      "id": 32,
+      "producto": 6,
+      "talla": 2,
+      "stock": 7
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 33,
+    "fields": {
+      "id": 33,
+      "producto": 6,
+      "talla": 3,
+      "stock": 9
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 34,
+    "fields": {
+      "id": 34,
+      "producto": 6,
+      "talla": 4,
+      "stock": 9
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 35,
+    "fields": {
+      "id": 35,
+      "producto": 6,
+      "talla": 5,
+      "stock": 7
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 36,
+    "fields": {
+      "id": 36,
+      "producto": 6,
+      "talla": 6,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 37,
+    "fields": {
+      "id": 37,
+      "producto": 7,
+      "talla": 1,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 38,
+    "fields": {
+      "id": 38,
+      "producto": 7,
+      "talla": 2,
+      "stock": 7
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 39,
+    "fields": {
+      "id": 39,
+      "producto": 7,
+      "talla": 3,
+      "stock": 10
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 40,
+    "fields": {
+      "id": 40,
+      "producto": 7,
+      "talla": 4,
+      "stock": 10
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 41,
+    "fields": {
+      "id": 41,
+      "producto": 7,
+      "talla": 5,
+      "stock": 7
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 42,
+    "fields": {
+      "id": 42,
+      "producto": 7,
+      "talla": 6,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 43,
+    "fields": {
+      "id": 43,
+      "producto": 8,
+      "talla": 1,
+      "stock": 2
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 44,
+    "fields": {
+      "id": 44,
+      "producto": 8,
+      "talla": 2,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 45,
+    "fields": {
+      "id": 45,
+      "producto": 8,
+      "talla": 3,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 46,
+    "fields": {
+      "id": 46,
+      "producto": 8,
+      "talla": 4,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 47,
+    "fields": {
+      "id": 47,
+      "producto": 8,
+      "talla": 5,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 48,
+    "fields": {
+      "id": 48,
+      "producto": 8,
+      "talla": 6,
+      "stock": 2
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 49,
+    "fields": {
+      "id": 49,
+      "producto": 9,
+      "talla": 1,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 50,
+    "fields": {
+      "id": 50,
+      "producto": 9,
+      "talla": 2,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 51,
+    "fields": {
+      "id": 51,
+      "producto": 9,
+      "talla": 3,
+      "stock": 8
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 52,
+    "fields": {
+      "id": 52,
+      "producto": 9,
+      "talla": 4,
+      "stock": 8
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 53,
+    "fields": {
+      "id": 53,
+      "producto": 9,
+      "talla": 5,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 54,
+    "fields": {
+      "id": 54,
+      "producto": 9,
+      "talla": 6,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 55,
+    "fields": {
+      "id": 55,
+      "producto": 10,
+      "talla": 1,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 56,
+    "fields": {
+      "id": 56,
+      "producto": 10,
+      "talla": 2,
+      "stock": 8
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 57,
+    "fields": {
+      "id": 57,
+      "producto": 10,
+      "talla": 3,
+      "stock": 11
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 58,
+    "fields": {
+      "id": 58,
+      "producto": 10,
+      "talla": 4,
+      "stock": 11
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 59,
+    "fields": {
+      "id": 59,
+      "producto": 10,
+      "talla": 5,
+      "stock": 8
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 60,
+    "fields": {
+      "id": 60,
+      "producto": 10,
+      "talla": 6,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 61,
+    "fields": {
+      "id": 61,
+      "producto": 11,
+      "talla": 1,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 62,
+    "fields": {
+      "id": 62,
+      "producto": 11,
+      "talla": 2,
+      "stock": 7
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 63,
+    "fields": {
+      "id": 63,
+      "producto": 11,
+      "talla": 3,
+      "stock": 9
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 64,
+    "fields": {
+      "id": 64,
+      "producto": 11,
+      "talla": 4,
+      "stock": 9
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 65,
+    "fields": {
+      "id": 65,
+      "producto": 11,
+      "talla": 5,
+      "stock": 7
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 66,
+    "fields": {
+      "id": 66,
+      "producto": 11,
+      "talla": 6,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 67,
+    "fields": {
+      "id": 67,
+      "producto": 12,
+      "talla": 1,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 68,
+    "fields": {
+      "id": 68,
+      "producto": 12,
+      "talla": 2,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 69,
+    "fields": {
+      "id": 69,
+      "producto": 12,
+      "talla": 3,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 70,
+    "fields": {
+      "id": 70,
+      "producto": 12,
+      "talla": 4,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 71,
+    "fields": {
+      "id": 71,
+      "producto": 12,
+      "talla": 5,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 72,
+    "fields": {
+      "id": 72,
+      "producto": 12,
+      "talla": 6,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 73,
+    "fields": {
+      "id": 73,
+      "producto": 13,
+      "talla": 1,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 74,
+    "fields": {
+      "id": 74,
+      "producto": 13,
+      "talla": 2,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 75,
+    "fields": {
+      "id": 75,
+      "producto": 13,
+      "talla": 3,
+      "stock": 7
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 76,
+    "fields": {
+      "id": 76,
+      "producto": 13,
+      "talla": 4,
+      "stock": 7
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 77,
+    "fields": {
+      "id": 77,
+      "producto": 13,
+      "talla": 5,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 78,
+    "fields": {
+      "id": 78,
+      "producto": 13,
+      "talla": 6,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 79,
+    "fields": {
+      "id": 79,
+      "producto": 14,
+      "talla": 1,
+      "stock": 2
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 80,
+    "fields": {
+      "id": 80,
+      "producto": 14,
+      "talla": 2,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 81,
+    "fields": {
+      "id": 81,
+      "producto": 14,
+      "talla": 3,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 82,
+    "fields": {
+      "id": 82,
+      "producto": 14,
+      "talla": 4,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 83,
+    "fields": {
+      "id": 83,
+      "producto": 14,
+      "talla": 5,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 84,
+    "fields": {
+      "id": 84,
+      "producto": 14,
+      "talla": 6,
+      "stock": 2
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 85,
+    "fields": {
+      "id": 85,
+      "producto": 15,
+      "talla": 1,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 86,
+    "fields": {
+      "id": 86,
+      "producto": 15,
+      "talla": 2,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 87,
+    "fields": {
+      "id": 87,
+      "producto": 15,
+      "talla": 3,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 88,
+    "fields": {
+      "id": 88,
+      "producto": 15,
+      "talla": 4,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 89,
+    "fields": {
+      "id": 89,
+      "producto": 15,
+      "talla": 5,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 90,
+    "fields": {
+      "id": 90,
+      "producto": 15,
+      "talla": 6,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 91,
+    "fields": {
+      "id": 91,
+      "producto": 16,
+      "talla": 1,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 92,
+    "fields": {
+      "id": 92,
+      "producto": 16,
+      "talla": 2,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 93,
+    "fields": {
+      "id": 93,
+      "producto": 16,
+      "talla": 3,
+      "stock": 8
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 94,
+    "fields": {
+      "id": 94,
+      "producto": 16,
+      "talla": 4,
+      "stock": 8
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 95,
+    "fields": {
+      "id": 95,
+      "producto": 16,
+      "talla": 5,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 96,
+    "fields": {
+      "id": 96,
+      "producto": 16,
+      "talla": 6,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 97,
+    "fields": {
+      "id": 97,
+      "producto": 17,
+      "talla": 1,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 98,
+    "fields": {
+      "id": 98,
+      "producto": 17,
+      "talla": 2,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 99,
+    "fields": {
+      "id": 99,
+      "producto": 17,
+      "talla": 3,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 100,
+    "fields": {
+      "id": 100,
+      "producto": 17,
+      "talla": 4,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 101,
+    "fields": {
+      "id": 101,
+      "producto": 17,
+      "talla": 5,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 102,
+    "fields": {
+      "id": 102,
+      "producto": 17,
+      "talla": 6,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 103,
+    "fields": {
+      "id": 103,
+      "producto": 18,
+      "talla": 1,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 104,
+    "fields": {
+      "id": 104,
+      "producto": 18,
+      "talla": 2,
+      "stock": 7
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 105,
+    "fields": {
+      "id": 105,
+      "producto": 18,
+      "talla": 3,
+      "stock": 10
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 106,
+    "fields": {
+      "id": 106,
+      "producto": 18,
+      "talla": 4,
+      "stock": 10
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 107,
+    "fields": {
+      "id": 107,
+      "producto": 18,
+      "talla": 5,
+      "stock": 7
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 108,
+    "fields": {
+      "id": 108,
+      "producto": 18,
+      "talla": 6,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 109,
+    "fields": {
+      "id": 109,
+      "producto": 19,
+      "talla": 1,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 110,
+    "fields": {
+      "id": 110,
+      "producto": 19,
+      "talla": 2,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 111,
+    "fields": {
+      "id": 111,
+      "producto": 19,
+      "talla": 3,
+      "stock": 8
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 112,
+    "fields": {
+      "id": 112,
+      "producto": 19,
+      "talla": 4,
+      "stock": 8
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 113,
+    "fields": {
+      "id": 113,
+      "producto": 19,
+      "talla": 5,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 114,
+    "fields": {
+      "id": 114,
+      "producto": 19,
+      "talla": 6,
+      "stock": 4
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 115,
+    "fields": {
+      "id": 115,
+      "producto": 20,
+      "talla": 1,
+      "stock": 2
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 116,
+    "fields": {
+      "id": 116,
+      "producto": 20,
+      "talla": 2,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 117,
+    "fields": {
+      "id": 117,
+      "producto": 20,
+      "talla": 3,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 118,
+    "fields": {
+      "id": 118,
+      "producto": 20,
+      "talla": 4,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 119,
+    "fields": {
+      "id": 119,
+      "producto": 20,
+      "talla": 5,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 120,
+    "fields": {
+      "id": 120,
+      "producto": 20,
+      "talla": 6,
+      "stock": 2
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 121,
+    "fields": {
+      "id": 121,
+      "producto": 21,
+      "talla": 1,
+      "stock": 8
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 122,
+    "fields": {
+      "id": 122,
+      "producto": 21,
+      "talla": 2,
+      "stock": 12
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 123,
+    "fields": {
+      "id": 123,
+      "producto": 21,
+      "talla": 3,
+      "stock": 16
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 124,
+    "fields": {
+      "id": 124,
+      "producto": 21,
+      "talla": 4,
+      "stock": 16
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 125,
+    "fields": {
+      "id": 125,
+      "producto": 21,
+      "talla": 5,
+      "stock": 12
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 126,
+    "fields": {
+      "id": 126,
+      "producto": 21,
+      "talla": 6,
+      "stock": 8
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 127,
+    "fields": {
+      "id": 127,
+      "producto": 22,
+      "talla": 1,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 128,
+    "fields": {
+      "id": 128,
+      "producto": 22,
+      "talla": 2,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 129,
+    "fields": {
+      "id": 129,
+      "producto": 22,
+      "talla": 3,
+      "stock": 7
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 130,
+    "fields": {
+      "id": 130,
+      "producto": 22,
+      "talla": 4,
+      "stock": 7
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 131,
+    "fields": {
+      "id": 131,
+      "producto": 22,
+      "talla": 5,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 132,
+    "fields": {
+      "id": 132,
+      "producto": 22,
+      "talla": 6,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 133,
+    "fields": {
+      "id": 133,
+      "producto": 23,
+      "talla": 1,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 134,
+    "fields": {
+      "id": 134,
+      "producto": 23,
+      "talla": 2,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 135,
+    "fields": {
+      "id": 135,
+      "producto": 23,
+      "talla": 3,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 136,
+    "fields": {
+      "id": 136,
+      "producto": 23,
+      "talla": 4,
+      "stock": 6
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 137,
+    "fields": {
+      "id": 137,
+      "producto": 23,
+      "talla": 5,
+      "stock": 5
+    }
+  },
+  {
+    "model": "productos.productotalla",
+    "pk": 138,
+    "fields": {
+      "id": 138,
+      "producto": 23,
+      "talla": 6,
+      "stock": 3
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "nombre": "evangelion",
+      "productos": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "nombre": "paprika",
+      "productos": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "nombre": "akira",
+      "productos": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "nombre": "serial-experiments-lain",
+      "productos": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 5,
+    "fields": {
+      "id": 5,
+      "nombre": "belladona-of-sadness",
+      "productos": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 6,
+    "fields": {
+      "id": 6,
+      "nombre": "ghost-in-the-shell",
+      "productos": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 7,
+    "fields": {
+      "id": 7,
+      "nombre": "my-bloody-valentine",
+      "productos": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 8,
+    "fields": {
+      "id": 8,
+      "nombre": "boris",
+      "productos": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 9,
+    "fields": {
+      "id": 9,
+      "nombre": "sonic-youth",
+      "productos": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 10,
+    "fields": {
+      "id": 10,
+      "nombre": "panico",
+      "productos": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 11,
+    "fields": {
+      "id": 11,
+      "nombre": "T.A.M",
+      "productos": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 12,
+    "fields": {
+      "id": 12,
+      "nombre": "crystal-castles",
+      "productos": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 13,
+    "fields": {
+      "id": 13,
+      "nombre": "fallen-angels",
+      "productos": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 14,
+    "fields": {
+      "id": 14,
+      "nombre": "chungking-express",
+      "productos": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 15,
+    "fields": {
+      "id": 15,
+      "nombre": "todo-sobre-mi-madre",
+      "productos": [
+        15
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 16,
+    "fields": {
+      "id": 16,
+      "nombre": "los-400-golpes",
+      "productos": [
+        16
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 17,
+    "fields": {
+      "id": 17,
+      "nombre": "terciopelo-azul",
+      "productos": [
+        17
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 18,
+    "fields": {
+      "id": 18,
+      "nombre": "la-haine",
+      "productos": [
+        18
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 19,
+    "fields": {
+      "id": 19,
+      "nombre": "ilustracion-original",
+      "productos": [
+        23,
+        22,
+        21,
+        20,
+        19,
+        17,
+        15,
+        13,
+        10,
+        8,
+        5
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 20,
+    "fields": {
+      "id": 20,
+      "nombre": "serigrafía",
+      "productos": [
+        23,
+        19,
+        18,
+        16,
+        11,
+        10,
+        9,
+        7,
+        6,
+        3,
+        1
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 21,
+    "fields": {
+      "id": 21,
+      "nombre": "edicion-limitada",
+      "productos": [
+        23,
+        20,
+        17,
+        14,
+        13,
+        12,
+        8,
+        7,
+        5,
+        3,
+        2,
+        1
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 22,
+    "fields": {
+      "id": 22,
+      "nombre": "vintage",
+      "productos": [
+        21,
+        16,
+        11,
+        9,
+        6
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 23,
+    "fields": {
+      "id": 23,
+      "nombre": "collage",
+      "productos": [
+        22,
+        20,
+        14,
+        12,
+        4,
+        2
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 24,
+    "fields": {
+      "id": 24,
+      "nombre": "shoegaze",
+      "productos": [
+        22,
+        19,
+        8,
+        7
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 25,
+    "fields": {
+      "id": 25,
+      "nombre": "punk",
+      "productos": [
+        21,
+        18,
+        11,
+        10,
+        9
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 26,
+    "fields": {
+      "id": 26,
+      "nombre": "anime-culto",
+      "productos": [
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 27,
+    "fields": {
+      "id": 27,
+      "nombre": "cine-culto",
+      "productos": [
+        18,
+        17,
+        16,
+        15,
+        14,
+        13
+      ]
+    }
+  }
+]
