@@ -1,0 +1,78 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "password": "pbkdf2_sha256$1000000$Pz4xIHEq33WIfmNb0oM9hS$9tSO8FD5ZmcwPVXdpWWD20PpxQdqw3/VyK5SwqWEi8U=",
+      "last_login": "2025-11-26T22:52:04.879147+00:00",
+      "is_superuser": true,
+      "username": "tori",
+      "first_name": "",
+      "last_name": "",
+      "email": "tori@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-11-26T19:49:26.365064+00:00",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "password": "pbkdf2_sha256$1000000$cbmdPVKCIm7gvaxFHD8VbM$f+0kLpNiQHktgucC1vip9q6dTboVRqfwhyUj2Iql9Qw=",
+      "last_login": "2025-11-26T22:19:02.865172+00:00",
+      "is_superuser": false,
+      "username": "torii",
+      "first_name": "Sofia",
+      "last_name": "Lagos",
+      "email": "sofia.aaa@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-11-26T22:18:48.615006+00:00",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "password": "pbkdf2_sha256$1000000$ePgFIiTgvkta2crBoXlR9y$03BF8CbVR3wKX1gwOCPE4ucFpIS2S4ALSgX+31GHVXE=",
+      "last_login": "2025-11-26T22:20:00.634939+00:00",
+      "is_superuser": false,
+      "username": "toriii",
+      "first_name": "Sofia",
+      "last_name": "Lagos",
+      "email": "sofia@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-11-26T22:19:59.369957+00:00",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "password": "pbkdf2_sha256$1000000$ovhxUCrDDp3qUYrLMeRYNH$WW1s/yQ9uZkv3+/VSjyFXEUvn40xl1B4OOw6WCWpd/A=",
+      "last_login": "2025-11-27T00:44:18.363968+00:00",
+      "is_superuser": false,
+      "username": "too0oori",
+      "first_name": "Sofia",
+      "last_name": "Lagos",
+      "email": "sofiaxx@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-11-26T22:20:50.301965+00:00",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

@@ -1,0 +1,356 @@
+[
+  {
+    "model": "productos.etiqueta",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "nombre": "evangelion",
+      "productos": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "nombre": "paprika",
+      "productos": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "nombre": "akira",
+      "productos": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "nombre": "serial-experiments-lain",
+      "productos": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 5,
+    "fields": {
+      "id": 5,
+      "nombre": "belladona-of-sadness",
+      "productos": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 6,
+    "fields": {
+      "id": 6,
+      "nombre": "ghost-in-the-shell",
+      "productos": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 7,
+    "fields": {
+      "id": 7,
+      "nombre": "my-bloody-valentine",
+      "productos": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 8,
+    "fields": {
+      "id": 8,
+      "nombre": "boris",
+      "productos": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 9,
+    "fields": {
+      "id": 9,
+      "nombre": "sonic-youth",
+      "productos": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 10,
+    "fields": {
+      "id": 10,
+      "nombre": "panico",
+      "productos": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 11,
+    "fields": {
+      "id": 11,
+      "nombre": "T.A.M",
+      "productos": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 12,
+    "fields": {
+      "id": 12,
+      "nombre": "crystal-castles",
+      "productos": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 13,
+    "fields": {
+      "id": 13,
+      "nombre": "fallen-angels",
+      "productos": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 14,
+    "fields": {
+      "id": 14,
+      "nombre": "chungking-express",
+      "productos": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 15,
+    "fields": {
+      "id": 15,
+      "nombre": "todo-sobre-mi-madre",
+      "productos": [
+        15
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 16,
+    "fields": {
+      "id": 16,
+      "nombre": "los-400-golpes",
+      "productos": [
+        16
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 17,
+    "fields": {
+      "id": 17,
+      "nombre": "terciopelo-azul",
+      "productos": [
+        17
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 18,
+    "fields": {
+      "id": 18,
+      "nombre": "la-haine",
+      "productos": [
+        18
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 19,
+    "fields": {
+      "id": 19,
+      "nombre": "ilustracion-original",
+      "productos": [
+        23,
+        22,
+        21,
+        20,
+        19,
+        17,
+        15,
+        13,
+        10,
+        8,
+        5
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 20,
+    "fields": {
+      "id": 20,
+      "nombre": "serigrafía",
+      "productos": [
+        23,
+        19,
+        18,
+        16,
+        11,
+        10,
+        9,
+        7,
+        6,
+        3,
+        1
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 21,
+    "fields": {
+      "id": 21,
+      "nombre": "edicion-limitada",
+      "productos": [
+        23,
+        20,
+        17,
+        14,
+        13,
+        12,
+        8,
+        7,
+        5,
+        3,
+        2,
+        1
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 22,
+    "fields": {
+      "id": 22,
+      "nombre": "vintage",
+      "productos": [
+        21,
+        16,
+        11,
+        9,
+        6
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 23,
+    "fields": {
+      "id": 23,
+      "nombre": "collage",
+      "productos": [
+        22,
+        20,
+        14,
+        12,
+        4,
+        2
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 24,
+    "fields": {
+      "id": 24,
+      "nombre": "shoegaze",
+      "productos": [
+        22,
+        19,
+        8,
+        7
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 25,
+    "fields": {
+      "id": 25,
+      "nombre": "punk",
+      "productos": [
+        21,
+        18,
+        11,
+        10,
+        9
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 26,
+    "fields": {
+      "id": 26,
+      "nombre": "anime-culto",
+      "productos": [
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ]
+    }
+  },
+  {
+    "model": "productos.etiqueta",
+    "pk": 27,
+    "fields": {
+      "id": 27,
+      "nombre": "cine-culto",
+      "productos": [
+        18,
+        17,
+        16,
+        15,
+        14,
+        13
+      ]
+    }
+  }
+]

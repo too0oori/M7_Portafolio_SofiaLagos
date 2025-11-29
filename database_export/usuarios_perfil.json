@@ -1,0 +1,35 @@
+[
+  {
+    "model": "usuarios.perfil",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "user": 2,
+      "telefono": "",
+      "fecha_nacimiento": null,
+      "avatar": ""
+    }
+  },
+  {
+    "model": "usuarios.perfil",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "user": 3,
+      "telefono": "",
+      "fecha_nacimiento": null,
+      "avatar": ""
+    }
+  },
+  {
+    "model": "usuarios.perfil",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "user": 4,
+      "telefono": "",
+      "fecha_nacimiento": null,
+      "avatar": ""
+    }
+  }
+]

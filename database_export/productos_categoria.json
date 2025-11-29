@@ -1,0 +1,50 @@
+[
+  {
+    "model": "productos.categoria",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "nombre": "Poleras Manga Corta",
+      "descripcion": "Poleras básicas de algodón 100% con estampados serigráficos",
+      "imagen": "",
+      "activo": true,
+      "slug": "poleras-manga-corta"
+    }
+  },
+  {
+    "model": "productos.categoria",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "nombre": "Poleras Manga Larga",
+      "descripcion": "Poleras de algodón con mangas largas ideales para el frío",
+      "imagen": "",
+      "activo": true,
+      "slug": "poleras-manga-larga"
+    }
+  },
+  {
+    "model": "productos.categoria",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "nombre": "Hoodies",
+      "descripcion": "Poleras con capucha y bolsillo canguro",
+      "imagen": "",
+      "activo": true,
+      "slug": "hoodies"
+    }
+  },
+  {
+    "model": "productos.categoria",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "nombre": "Totebags",
+      "descripcion": "Bolsos de tela estampados",
+      "imagen": "",
+      "activo": true,
+      "slug": "totebags"
+    }
+  }
+]

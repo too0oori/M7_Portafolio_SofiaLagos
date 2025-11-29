@@ -1,0 +1,370 @@
+[
+  {
+    "model": "productos.producto",
+    "pk": 23,
+    "fields": {
+      "id": 23,
+      "nombre": "Hoodie Arte Louise Bourgeois",
+      "descripcion": "Hoodie con Arte de Louise Bourgeois, Maman",
+      "precio": "32990.00",
+      "stock": 20,
+      "categoria": 3,
+      "imagen_principal": "productos/louise.jpg",
+      "fecha_creacion": "2025-11-26T19:48:13.822702+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 22,
+    "fields": {
+      "id": 22,
+      "nombre": "Polera Ojos",
+      "descripcion": "Distorsion",
+      "precio": "16990.00",
+      "stock": 22,
+      "categoria": 2,
+      "imagen_principal": "productos/ojos.jpg",
+      "fecha_creacion": "2025-11-26T19:48:13.670212+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 21,
+    "fields": {
+      "id": 21,
+      "nombre": "Totebag Resist",
+      "descripcion": "Bolso de tela con estampado de protesta.",
+      "precio": "8990.00",
+      "stock": 50,
+      "categoria": 4,
+      "imagen_principal": "productos/tote.jpg",
+      "fecha_creacion": "2025-11-26T19:48:13.520078+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 20,
+    "fields": {
+      "id": 20,
+      "nombre": "Polera Palestina Resiste",
+      "descripcion": "Collage",
+      "precio": "17990.00",
+      "stock": 15,
+      "categoria": 1,
+      "imagen_principal": "productos/palestina.jpg",
+      "fecha_creacion": "2025-11-26T19:48:13.365469+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 19,
+    "fields": {
+      "id": 19,
+      "nombre": "Polera Kill Bill",
+      "descripcion": "Inspirada en la película de Tarantino",
+      "precio": "16990.00",
+      "stock": 25,
+      "categoria": 1,
+      "imagen_principal": "productos/killbill.jpg",
+      "fecha_creacion": "2025-11-26T19:48:13.225095+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 18,
+    "fields": {
+      "id": 18,
+      "nombre": "Polera La Haine",
+      "descripcion": "Blanco y negro crudo. Diseño urbano inspirado en el film francés.",
+      "precio": "15990.00",
+      "stock": 30,
+      "categoria": 1,
+      "imagen_principal": "productos/lahaine.jpg",
+      "fecha_creacion": "2025-11-26T19:48:12.920247+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 17,
+    "fields": {
+      "id": 17,
+      "nombre": "Polera Terciopelo Azul",
+      "descripcion": "Surrealismo lynchiano. Oreja en campo con rosas rojas. Diseño perturbador y hermoso.",
+      "precio": "17990.00",
+      "stock": 18,
+      "categoria": 2,
+      "imagen_principal": "productos/bluevelvet.jpg",
+      "fecha_creacion": "2025-11-26T19:48:12.791057+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 16,
+    "fields": {
+      "id": 16,
+      "nombre": "Polera 400 Golpes",
+      "descripcion": "Homenaje a la nouvelle vague francesa. Ilustración minimalista de Antoine Doinel.",
+      "precio": "16990.00",
+      "stock": 25,
+      "categoria": 1,
+      "imagen_principal": "productos/400golpes.jpg",
+      "fecha_creacion": "2025-11-26T19:48:12.625084+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 15,
+    "fields": {
+      "id": 15,
+      "nombre": "Polera Almodóvar",
+      "descripcion": "Tributo a Todo Sobre Mi Madre. Diseño colorido con elementos del film.",
+      "precio": "17990.00",
+      "stock": 20,
+      "categoria": 1,
+      "imagen_principal": "productos/todosobremimadre.jpg",
+      "fecha_creacion": "2025-11-26T19:48:12.453798+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 14,
+    "fields": {
+      "id": 14,
+      "nombre": "Hoodie Chungking Express",
+      "descripcion": "Collage romántico inspirado en Wong Kar-wai. California Dreamin' en la espalda.",
+      "precio": "29990.00",
+      "stock": 15,
+      "categoria": 3,
+      "imagen_principal": "productos/chunking.jpg",
+      "fecha_creacion": "2025-11-26T19:48:12.297988+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 13,
+    "fields": {
+      "id": 13,
+      "nombre": "Polera Fallen Angels",
+      "descripcion": "Homenaje al noir hongkonés. Ilustración de neón borroso y melancolía urbana.",
+      "precio": "18990.00",
+      "stock": 22,
+      "categoria": 1,
+      "imagen_principal": "productos/fallenangels.jpg",
+      "fecha_creacion": "2025-11-26T19:48:12.139833+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 12,
+    "fields": {
+      "id": 12,
+      "nombre": "Polera Crystal Castles",
+      "descripcion": "Crystal Castles (III)",
+      "precio": "17990.00",
+      "stock": 20,
+      "categoria": 2,
+      "imagen_principal": "productos/cc.jpg",
+      "fecha_creacion": "2025-11-26T19:48:11.990115+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 11,
+    "fields": {
+      "id": 11,
+      "nombre": "Polera T.A.M",
+      "descripcion": "Diseño crudo inspirado en la escena hardcore chilena. Estética DIY con textura vintage.",
+      "precio": "14990.00",
+      "stock": 28,
+      "categoria": 1,
+      "imagen_principal": "productos/tam.jpg",
+      "fecha_creacion": "2025-11-26T19:48:11.820807+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 10,
+    "fields": {
+      "id": 10,
+      "nombre": "Polera Pánico",
+      "descripcion": "Homenaje a los pioneros del noise rock chileno.",
+      "precio": "15990.00",
+      "stock": 35,
+      "categoria": 1,
+      "imagen_principal": "productos/panico.jpg",
+      "fecha_creacion": "2025-11-26T19:48:11.649945+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 9,
+    "fields": {
+      "id": 9,
+      "nombre": "Polera Sonic Youth",
+      "descripcion": "Collage",
+      "precio": "16990.00",
+      "stock": 25,
+      "categoria": 1,
+      "imagen_principal": "productos/sonicyouth.jpg",
+      "fecha_creacion": "2025-11-26T19:48:11.483058+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 8,
+    "fields": {
+      "id": 8,
+      "nombre": "Hoodie Pink (Boris)",
+      "descripcion": "Tributo a la banda japonesa de drone/shoegaze",
+      "precio": "31990.00",
+      "stock": 12,
+      "categoria": 3,
+      "imagen_principal": "productos/boris.jpg",
+      "fecha_creacion": "2025-11-26T19:48:11.317769+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 7,
+    "fields": {
+      "id": 7,
+      "nombre": "Polera My Bloody Valentine",
+      "descripcion": "Homenaje al disco definitivo del shoegaze. Diseño abstracto inspirado en la portada.",
+      "precio": "17990.00",
+      "stock": 30,
+      "categoria": 1,
+      "imagen_principal": "productos/mbv.jpg",
+      "fecha_creacion": "2025-11-26T19:48:11.161604+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 6,
+    "fields": {
+      "id": 6,
+      "nombre": "Polera Ghost in the Shell",
+      "descripcion": "Ilustración poster",
+      "precio": "16990.00",
+      "stock": 28,
+      "categoria": 1,
+      "imagen_principal": "productos/gits.jpg",
+      "fecha_creacion": "2025-11-26T19:48:11.003091+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 5,
+    "fields": {
+      "id": 5,
+      "nombre": "Polera Belladonna",
+      "descripcion": "Tributo a Belladonna of Sadness. Ilustración art nouveau con elementos psicodélicos.",
+      "precio": "18990.00",
+      "stock": 18,
+      "categoria": 1,
+      "imagen_principal": "productos/belladona.jpg",
+      "fecha_creacion": "2025-11-26T19:48:10.826764+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "nombre": "Polera Lain",
+      "descripcion": "Arte glitch inspirado en Serial Experiments Lain. Diseño experimental.",
+      "precio": "16990.00",
+      "stock": 22,
+      "categoria": 2,
+      "imagen_principal": "productos/lain.jpg",
+      "fecha_creacion": "2025-11-26T19:48:10.674431+00:00",
+      "activo": true,
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "nombre": "Hoodie Akira",
+      "descripcion": "Hoodie premium con capucha doble.",
+      "precio": "29990.00",
+      "stock": 15,
+      "categoria": 3,
+      "imagen_principal": "productos/akira.jpg",
+      "fecha_creacion": "2025-11-26T19:48:10.507828+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "nombre": "Polera Paprika Dreams",
+      "descripcion": "Homenaje a la obra maestra de Satoshi Kon. Collage onírico con elementos del film.",
+      "precio": "17990.00",
+      "stock": 20,
+      "categoria": 1,
+      "imagen_principal": "productos/paprika.jpg",
+      "fecha_creacion": "2025-11-26T19:48:10.343158+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "nombre": "Polera Ángel Mecánico (Evangelion)",
+      "descripcion": "Ilustración minimalista del EVA-01 con alas de ángel. Serigrafía en 2 colores sobre algodón 100%.",
+      "precio": "15990.00",
+      "stock": 25,
+      "categoria": 1,
+      "imagen_principal": "productos/evangelion.jpg",
+      "fecha_creacion": "2025-11-26T19:48:10.185595+00:00",
+      "activo": true,
+      "destacado": true
+    }
+  }
+]

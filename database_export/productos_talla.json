@@ -1,0 +1,56 @@
+[
+  {
+    "model": "productos.talla",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "nombre": "XS",
+      "descripcion": "Pecho: 85cm, Largo: 65cm"
+    }
+  },
+  {
+    "model": "productos.talla",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "nombre": "S",
+      "descripcion": "Pecho: 90cm, Largo: 68cm"
+    }
+  },
+  {
+    "model": "productos.talla",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "nombre": "M",
+      "descripcion": "Pecho: 95cm, Largo: 71cm"
+    }
+  },
+  {
+    "model": "productos.talla",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "nombre": "L",
+      "descripcion": "Pecho: 100cm, Largo: 74cm"
+    }
+  },
+  {
+    "model": "productos.talla",
+    "pk": 5,
+    "fields": {
+      "id": 5,
+      "nombre": "XL",
+      "descripcion": "Pecho: 110cm, Largo: 77cm"
+    }
+  },
+  {
+    "model": "productos.talla",
+    "pk": 6,
+    "fields": {
+      "id": 6,
+      "nombre": "XXL",
+      "descripcion": "Pecho: 120cm, Largo: 80cm"
+    }
+  }
+]
